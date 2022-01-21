@@ -15,7 +15,7 @@ const Token = ({item, onClick, onCollect}) => {
 				<div className="right floated">
 					Price:
 					<div style={{ color: "black" }}>
-						{item.amount}
+						{item.amount + ' ꜩ'}
 					</div>
 				</div>
 				<div className="header">{item.name}</div>

@@ -17,8 +17,8 @@ const Header = ({Tezos, wallet, setTezos}) => {
     }
 
     return (
-            <div className="ui menu black" style={{'marginTop':'5px'}}>
-                <a href="/#" className="ui header item">NFTs</a>
+            <div className="ui menu black" style={{'marginTop':'30px'}}>
+                <a href="/#" className="ui header item"><img style={{'width':'100px'}} src="https://beta.discoapp.xyz/static/media/navbar_logo.eab00386.png"></img>_nfts</a>
                 <Link className="item" to="/">Home</Link>
 
                 {selector.userAddress!==""?
@@ -26,6 +26,11 @@ const Header = ({Tezos, wallet, setTezos}) => {
                 :null}
 
                 <div className="right menu">
+
+                    {selector.userAddress!==""?
+                    <Link className="item" to="/">Profile</Link>
+                    :null}
+
                     {(selector.userAddress==="")?
                     <a href="/#" className="item" onClick={onClick}>Connect Wallet</a>:
                     <a href="/#" className="item" onClick={onClick}>Disconnect Wallet</a>}
